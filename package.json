@@ -1,0 +1,42 @@
+{
+  "name": "calculator-example",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "dev": "yarn development",
+    "development": "cross-env NODE_ENV=development node_modules/webpack/bin/webpack.js --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
+    "watch": "yarn development -- --watch",
+    "hot": "cross-env NODE_ENV=development node_modules/webpack-dev-server/bin/webpack-dev-server.js --inline --hot --config=node_modules/laravel-mix/setup/webpack.config.js",
+    "prod": "yarn production",
+    "production": "cross-env NODE_ENV=production node_modules/webpack/bin/webpack.js --no-progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
+    "lint": "eslint 'src/**/*.{js,vue}' --fix"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "yarn lint"
+    }
+  },
+  "devDependencies": {
+    "@tailwindcss/custom-forms": "^0.2.1",
+    "browser-sync": "^2.26.7",
+    "browser-sync-webpack-plugin": "^2.0.1",
+    "chart.js": "^2.9.3",
+    "cross-env": "^7.0.2",
+    "eslint": "^6.8.0",
+    "eslint-plugin-vue": "^7.0.0-alpha.1",
+    "husky": "^4.2.5",
+    "laravel-mix": "^5.0.1",
+    "laravel-mix-tailwind": "^0.1.0",
+    "resolve-url-loader": "^3.1.0",
+    "sass": "^1.26.2",
+    "sass-loader": "^8.0.2",
+    "tailwindcss": "^1.2.0",
+    "vue": "^2.6.11",
+    "vue-chartjs": "^3.5.0",
+    "vue-template-compiler": "^2.6.11"
+  },
+  "dependencies": {
+    "vue-router": "^3.1.6"
+  }
+}
